@@ -982,7 +982,7 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def run_bot():
     """Функция запуска бота для Render"""
-    BOT_TOKEN = os.environ.get('BOT_TOKEN')
+    BOT_TOKEN = os.environ.get('8336386577:AAF1kKtD1akVWzvtK_cZIeEdPw4tpORHibc')
     if not BOT_TOKEN:
         print("❌ Ошибка: BOT_TOKEN не найден в переменных окружения")
         return
