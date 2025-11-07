@@ -9,6 +9,9 @@ from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ContextTypes, filters
 from flask import Flask
 
+# ТОКЕН БОТА - ЗАМЕНИ ЭТУ СТРОКУ!
+BOT_TOKEN = "8336386577:AAF1kKtD1akVWzvtK_cZIeEdPw4tpORHibc"
+
 # Настройка логов
 logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.basicConfig(
@@ -982,9 +985,9 @@ async def error_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 def run_bot():
     """Функция запуска бота для Render"""
-    BOT_TOKEN = os.environ.get('8336386577:AAF1kKtD1akVWzvtK_cZIeEdPw4tpORHibc')
+    # Используем глобальный токен
     if not BOT_TOKEN:
-        print("❌ Ошибка: BOT_TOKEN не найден в переменных окружения")
+        print("❌ Ошибка: BOT_TOKEN не найден")
         return
 
     # Создание приложения
